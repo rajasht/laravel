@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\BladeOpsController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,5 +107,7 @@ Route::get('bladeop1',[BladeOpsController::class,"loadView"]);
 Route::get('bladeop2',[BladeOpsController::class,"loadView1"]);
 Route::get('bladeop2',[BladeOpsController::class,"getcount"]);
 
+//----------------- Form Operation Controller--------------
 
-
+Route::post('user',[FormController::class,"getData"]);
+Route::view('login',"form");
