@@ -66,6 +66,8 @@ Route::get('/hello/{name}', function ($name) {
 
 //----- REDIRECTION TO ABOUT PAGE------------------
 
+/*
+
 Route::redirect("/hello","about");
 
 
@@ -92,22 +94,49 @@ Route::redirect('view2',"view1");
 // Passing Arguments into View Using Controller-routed-function
 Route::get('view2/{name}',[DemoController::class,"argsView"]);
 
+*/
+
 //------------------------------------------------------------------------
 //-------COMPONENTS------------------
 
+/*
 Route::view("user","users");
 Route::view("user1","users1");
+*/
 
 //------------------------------------------------------------------------
 
 //---------- Blade Template Opearations Routes -------------
 
-
+/*
 Route::get('bladeop1',[BladeOpsController::class,"loadView"]);
 Route::get('bladeop2',[BladeOpsController::class,"loadView1"]);
-Route::get('bladeop2',[BladeOpsController::class,"getcount"]);
+Route::get('bladeop3',[BladeOpsController::class,"getcount"]);
+*/
 
 //----------------- Form Operation Controller--------------
-
+/*
 Route::post('user',[FormController::class,"getData"]);
 Route::view('login',"form");
+*/
+//---------------------Middleware Operations -------------------
+
+Route::view('accden','accden');
+Route::view('home','home')->middleware('AgeProtection');
+Route::view('accgrt','accgrt');
+Route::view('users','mdwMain');
+
+// Route::group(['middleware' => ['AgeRestricted']],function(){
+//     Route::view('accgrt','accgrt');
+//     Route::view('users','mdwMain');
+
+// });
+
+
+
+
+
+
+
+
+

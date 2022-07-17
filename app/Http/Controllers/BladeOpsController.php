@@ -13,7 +13,7 @@ class BladeOpsController extends Controller
     }
     
     public function loadView1(){
-        return view('bladeops',["name"=>"Raja"]);
+        return view('bladeops2',["name"=>"Raja"]);
     }
     
     public function getcount(){
