@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\BladeOpsController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\TerMdwController;
 
 /*
 |--------------------------------------------------------------------------
@@ -131,6 +132,8 @@ Route::view('users','mdwMain');
 //     Route::view('users','mdwMain');
 
 // });
+
+Route::get('terminate',[TerMdwController::class,'index'])->middleware('Terminate');
 
 
 
