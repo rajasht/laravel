@@ -135,7 +135,7 @@ Route::view('users','mdwMain');
 
 Route::get('terminate',[TerMdwController::class,'index'])->middleware('Terminate');
 
-
+//------------------------ Book Database Operations ---------------------
 
 
 
