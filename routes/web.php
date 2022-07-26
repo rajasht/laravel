@@ -127,11 +127,11 @@ Route::view('home','home')->middleware('AgeProtection');
 Route::view('accgrt','accgrt');
 Route::view('users','mdwMain');
 
-// Route::group(['middleware' => ['AgeRestricted']],function(){
-//     Route::view('accgrt','accgrt');
-//     Route::view('users','mdwMain');
 
-// });
+Route::group(['middleware' => ['AgeRestricted']],function(){
+    Route::view('accgrt','accgrt');
+    Route::view('users','mdwMain');
+});
 
 Route::get('terminate',[TerMdwController::class,'index'])->middleware('Terminate');
 

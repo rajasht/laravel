@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/allbooks',[BooksController::class,'showAllBooks']);
-Route::get('/book/{bkid}',[BooksController::class,'showThisBook']);
+Route::get('/book/{bknm}',[BooksController::class,'showThisBook']);
 Route::post('/addbook',[BooksController::class,'addBook']);
 Route::put('/updatebook',[BooksController::class,'updateBook']);
 Route::delete('/deletebook/{bk_id}',[BooksController::class,'deleteBook']);

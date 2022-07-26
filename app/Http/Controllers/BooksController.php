@@ -22,10 +22,11 @@ class BooksController extends Controller
 
         $book = new book;
 
-        $book->Book_title = $req->Book_title;
-        $book->Author = $req->Author;
-        $book->Release_date = $req->Release_date;
-        $book->Price = $req->Price;
+        $book->book_title = $req->book_title;
+        $book->book_author = $req->book_author;
+        $book->pages_count = $req->pages_count;
+        $book->price = $req->price;
+        $book->published_on = $req->published_on;
         $res = $book->save();
         if($res){
             return ["Result" =>"Book Added to Database Successfully."];
